@@ -9,9 +9,9 @@ import routes from "./src/routes/index.js";
 const app = express();
 
 const corsOptions ={
-  origin:'https://selfkicks.vercel.app',
+  origin:['https://selfkicks.vercel.app',],
   credentials:true,
-  allowedHeaders: ['Content-Type','Access-Control-Allow-Origin', 'Authorization']
+  allowedHeaders: ['Accept','Content-Type','Access-Control-Allow-Origin', 'Authorization']
 }
 
 app.use(express.json());
