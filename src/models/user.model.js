@@ -40,7 +40,7 @@ userSchema.methods.validPassword = function (password) {
   const hash = crypto.pbkdf2Sync(
     password,
     this.salt,
-    1000,
+    100,
     64,
     "sha512"
   ).toString("hex");
