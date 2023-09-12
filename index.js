@@ -14,7 +14,9 @@ const corsOptions ={
   allowedHeaders: ['Accept','Content-Type', 'Authorization']
 }
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://selfkicks.vercel.app'
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
