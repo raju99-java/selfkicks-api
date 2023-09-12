@@ -37,6 +37,7 @@ const signup = async (req, res) => {
 
 const signin = async (req, res) => {
   try {
+    console.log('raju');
     const { username, password } = req.body;
 
     const user = await userModel.findOne({ username }).select("username password salt id displayName");
